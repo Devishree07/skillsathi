@@ -1,24 +1,41 @@
+/* Base styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background-color: #2C3E50;
-  color: rgb(158, 138, 138);
+  color: rgb(199, 182, 182);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
 
+/* Buttons full-width on small screens */
+a.btn, button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Sections padding adjustments for mobile */
+section {
+  padding: 40px 20px;
+}
 .navbar {
   position: sticky;
   top: 0;
   background-color: #2C3E50;
-  padding: 15px 30px;
- 
-  justify-content: center;
-  
+  padding: 15px 20px;
+  z-index: 1000;
 }
 
 .navbar ul {
@@ -26,362 +43,38 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 25px;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 .navbar ul li a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #fff;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
   transition: color 0.3s;
 }
 
 .navbar ul li a:hover {
   color: #F39C12;
 }
-
-
 .hero {
   background-image: url('portrait-man-working-as-plumber.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 270px 30px 60px;
+  background-position: center;
+  padding: 150px 20px 60px; /* reduced for mobile */
+  text-align: center;
 }
 
 .heading {
-  font-size: 70px;
+  font-size: 40px; /* smaller on phones */
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
-  text-shadow: 0 0 5px skyblue, 0 0 10px skyblue, 0 0 20px skyblue;
-  animation: flicker 2s infinite alternate;
+  text-shadow: 0 0 5px skyblue, 0 0 10px skyblue;
 }
 
 .para {
-  font-size: 18px;
-  padding-top: 10px;
-}
-
-
-.content-section {
-  padding: 40px 30px;
-  background-color: #FAF8F1;
-  color: #2C3E50;
-}
-
-.content-section:nth-child(even) {
-  background-color: #ffffff;
-}
-
-.register
-{
-    height: 50px;
-    width: 150px;
-    border-radius: 30px;
-    background-color:#2C3E50;
-    border: none;
-    color: white;
-    font-size: large;
-    font-weight: 500;
-}
-.register:hover
-{
-    background-color: #F39C12;
-    transition: 0.3s ease-in-out;
-    transform: scale(1.1);
-}
-.find
-{
-    height: 50px;
-    width: 150px;
-    border-radius: 30px;
-    background-color:#2C3E50;
-    border: none;
-    color: white;
-    font-size: large;
-    font-weight: 500;
-}
-.find:hover
-{
-    background-color: #F39C12;
-    transition: 0.3s ease-in-out;
-    transform: scale(1.1);
-}
-footer{
-  background-color: #2C3E50;
-  color: #FAF8F1;
-  padding: 30px 30px;
-  background-image: url('c.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-a
-{
-    text-decoration: none;
-    color: white;
-}
-.about-section {
-  background-color: #FAF8F1;
-  color: #2C3E50;
-  padding: 80px 30px;
-}
-
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.about-text h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.about-image {
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
-}
-
-.about-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-.register-section {
-  background-color: #ffffff;
-  color: #2C3E50;
-  padding: 80px 30px;
-}
-
-.register-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-  justify-content: space-between;
-}
-
-.register-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.register-text h2 {
-  font-size: 36px;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 20px;
-}
-
-.register-text p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.register-buttons .btn {
-  text-decoration: none;
-  display: inline-block;
-  padding: 12px 24px;
   font-size: 16px;
-  font-weight: 600;
-  border-radius: 6px;
-  margin-right: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.call-btn {
-  background-color: #3498DB;
-  color: white;
-}
-
-.call-btn:hover {
-  background-color: #2C80B4;
-}
-
-.whatsapp-btn {
-  background-color: #25D366;
-  color: white;
-}
-
-.whatsapp-btn:hover {
-  background-color: #1DA851;
-}
-
-.register-image {
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
-}
-
-.register-image img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-.find-section {
-  padding: 80px 30px;
-  background-color: #f9f9f9;
-  color: #2C3E50;
-  text-align: center;
-}
-
-.find-section h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.worker-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.worker-card {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.worker-card:hover {
-  transform: scale(1.05);
-}
-
-.worker-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.contact-btns {
-  margin-top: 15px;
-}
-
-.contact-btns .btn {
-  margin: 5px;
-  padding: 10px 15px;
-  font-size: 14px;
-}
-/* Tablet view (≤ 768px) */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .hero {
-    padding: 150px 20px 40px;
-    text-align: center;
-    background-position: center;
-  }
-
-  .heading {
-    font-size: 40px;
-  }
-
-  .para {
-    font-size: 16px;
-  }
-
-  .about-content, 
-  .register-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text h2,
-  .register-text h2,
-  .find-section h2 {
-    font-size: 28px;
-  }
-
-  .about-text p,
-  .register-text p {
-    font-size: 16px;
-  }
-
-  .worker-card {
-    width: 90%;
-  }
-
-  button, .btn {
-    width: 80%;
-    max-width: 300px;
-    margin: 10px auto;
-  }
-}
-
-/* Mobile view (≤ 480px) */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-  }
-
-  .navbar ul li a {
-    font-size: 14px;
-  }
-
-  .hero {
-    padding: 120px 15px 30px;
-  }
-
-  .heading {
-    font-size: 28px;
-  }
-
-  .para {
-    font-size: 14px;
-  }
-
-  .about-text h2,
-  .register-text h2,
-  .find-section h2 {
-    font-size: 22px;
-  }
-
-  .about-text p,
-  .register-text p {
-    font-size: 14px;
-  }
-
-  .worker-card {
-    width: 100%;
-  }
-
-  button, .btn {
-    font-size: 14px;
-    padding: 10px;
-    width: 90%;
-  }
+  padding-top: 10px;
 }
