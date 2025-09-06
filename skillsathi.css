@@ -4,7 +4,7 @@ html {
 
 body {
   background-color: #2C3E50;
-  color: white;
+  color: rgb(158, 138, 138);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
@@ -286,30 +286,57 @@ a
   padding: 10px 15px;
   font-size: 14px;
 }
-/* Default: Desktop (already working with your current CSS) */
-
-/* Tablet view */
+/* Tablet view (≤ 768px) */
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
+    text-align: center;
   }
 
   .hero {
+    padding: 150px 20px 40px;
     text-align: center;
-    padding: 20px;
+    background-position: center;
   }
 
-  .content-section {
-    padding: 15px;
+  .heading {
+    font-size: 40px;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+
+  .about-content, 
+  .register-container {
+    flex-direction: column;
     text-align: center;
   }
 
-  button {
-    width: 100%;
-    margin-top: 10px;
+  .about-text h2,
+  .register-text h2,
+  .find-section h2 {
+    font-size: 28px;
+  }
+
+  .about-text p,
+  .register-text p {
+    font-size: 16px;
+  }
+
+  .worker-card {
+    width: 90%;
+  }
+
+  button, .btn {
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
   }
 }
+
+/* Mobile view (≤ 480px) */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -317,31 +344,44 @@ a
 
   .navbar ul {
     flex-direction: column;
+    gap: 10px;
     padding: 0;
   }
 
-  .navbar li {
-    margin: 8px 0;
-  }
-
-  .hero h1 {
-    font-size: 24px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .content-section h2 {
-    font-size: 18px;
-  }
-
-  .content-section p {
+  .navbar ul li a {
     font-size: 14px;
   }
 
-  button {
+  .hero {
+    padding: 120px 15px 30px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .para {
+    font-size: 14px;
+  }
+
+  .about-text h2,
+  .register-text h2,
+  .find-section h2 {
+    font-size: 22px;
+  }
+
+  .about-text p,
+  .register-text p {
+    font-size: 14px;
+  }
+
+  .worker-card {
+    width: 100%;
+  }
+
+  button, .btn {
     font-size: 14px;
     padding: 10px;
+    width: 90%;
   }
 }
